@@ -1182,6 +1182,31 @@ h3 {
   background: #f0fff4;
 }
 
+.help-step.star-step {
+  border-color: var(--accent-2);
+  background: linear-gradient(135deg, #fff9e6, #fff);
+  box-shadow: 0 4px 16px rgba(255, 217, 61, 0.3);
+}
+
+.pages-link-wrap {
+  margin-top: 0.75rem;
+}
+
+.pages-link {
+  display: inline-block;
+  color: #0984e3;
+  font-weight: 800;
+  font-size: 1rem;
+  word-break: break-all;
+}
+
+.pages-link-wrap small {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+
 .help-step strong {
   display: block;
   margin-bottom: 0.35rem;

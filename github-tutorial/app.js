@@ -102,12 +102,17 @@ function applyStaticI18n() {
   $("#help-why").textContent = t("helpWhy");
   $("#help-reason").innerHTML = t("helpReason");
   $("#help-steps-title").textContent = t("helpStepsTitle");
+  $("#help-step0-title").textContent = t("helpStep0Title");
+  $("#help-step0").innerHTML = t("helpStep0");
   $("#help-step1-title").textContent = t("helpStep1Title");
   $("#help-step1").innerHTML = t("helpStep1");
   $("#help-step2-title").textContent = t("helpStep2Title");
   $("#help-step2").innerHTML = t("helpStep2");
   $("#help-step3-title").textContent = t("helpStep3Title");
   $("#help-step3").innerHTML = t("helpStep3");
+  $("#help-pages-link").textContent = t("helpPagesUrl");
+  $("#help-pages-link").href = t("helpPagesUrl");
+  $("#help-pages-note").textContent = t("helpPagesNote");
 
   $("#pg-title").textContent = t("playgroundTitle");
   $("#pg-subtitle").textContent = t("playgroundSubtitle");

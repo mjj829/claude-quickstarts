@@ -11,17 +11,32 @@ An interactive, **beginner-friendly** GitHub tutorial — simple enough for kids
 - ✨ **Detailed "Create first project" lesson** — 8 steps + interactive GitHub mock demo
 - 🎓 Quizzes and graduation certificate
 
-## Quick start
+## Quick start — no IP lookup needed!
 
-### On computer
+### ⭐ One click (recommended)
+
+**Windows:** double-click `start.bat`  
+**Mac / Linux:** run `./start.sh`
+
+The script will:
+1. **Find your computer's IP automatically**
+2. **Open a link page with QR code** in your browser
+3. **Scan the QR code on your phone** (same WiFi) — done!
+
+Links are also saved to `YOUR-PHONE-LINK.txt`.
+
+### Permanent link (no WiFi needed)
+
+After merging the PR, enable **GitHub Pages** once (repo **Settings → Pages → Build: GitHub Actions**), then open anytime on any device:
+
+**https://mjj829.github.io/claude-quickstarts/**
+
+### Manual (computer only)
 
 ```bash
 cd github-tutorial
-python3 -m http.server 8080
-# Open http://localhost:8080
+python3 start.py
 ```
-
-### On phone — why localhost fails
 
 **`localhost` always means "this device itself."** If you type `localhost` on your phone, the phone looks for a server on the phone — not on your computer. That's why Safari shows "cannot connect to server."
 

@@ -76,7 +76,10 @@ const I18N = {
     helpWhy: "为什么手机访问 localhost 不行？",
     helpReason:
       "<strong>localhost =「这台设备自己」</strong>。你在手机上输入 localhost，手机会在<strong>自己</strong>里找网页，而网页其实在<strong>电脑上</strong>运行，所以 Safari 会报「无法连接服务器」。",
-    helpStepsTitle: "正确做法（3 选 1）",
+    helpStepsTitle: "正确做法（4 选 1）",
+    helpStep0Title: "⭐ 最简单：一键启动（不用找 IP！）",
+    helpStep0:
+      "在电脑上进入 <code>github-tutorial</code> 文件夹，双击 <code>start.bat</code>（Windows）或运行 <code>./start.sh</code>（Mac/Linux）。<br />脚本会<strong>自动找到 IP</strong>、打开带<strong>二维码</strong>的链接页，手机扫码就能学！",
     helpStep1Title: "方法一：同一 WiFi，用电脑 IP",
     helpStep1:
       "1. 电脑和手机连<strong>同一个 WiFi</strong><br />2. 在电脑上运行：<code>python3 -m http.server 8080 --bind 0.0.0.0</code><br />3. 查电脑 IP（Mac：系统设置 → 网络；Windows：ipconfig）<br />4. 手机浏览器输入：<strong>http://电脑IP:8080</strong>（例如 http://192.168.1.5:8080）",
@@ -86,6 +89,8 @@ const I18N = {
     helpStep3Title: "方法三：部署到 GitHub Pages",
     helpStep3:
       "把项目 push 到 GitHub，开启 Pages，用手机访问 <strong>https://你的用户名.github.io/项目名</strong>，随时随地都能学！",
+    helpPagesUrl: "https://mjj829.github.io/claude-quickstarts/",
+    helpPagesNote: "（合并 PR 并在 GitHub 仓库 Settings → Pages → Source 选 GitHub Actions 后可用）",
     helpToggle: "📱 手机访问指南",
     langToggle: "EN",
     detailedSteps: "📋 详细步骤",
@@ -169,7 +174,10 @@ const I18N = {
     helpWhy: "Why doesn't localhost work on mobile?",
     helpReason:
       "<strong>localhost means \"this device itself.\"</strong> When you type localhost on your phone, the phone looks for a server <strong>on the phone</strong> — but the page is running on your <strong>computer</strong>. That's why Safari says it can't connect.",
-    helpStepsTitle: "3 ways to fix it",
+    helpStepsTitle: "4 ways to fix it",
+    helpStep0Title: "⭐ Easiest: one-click start (no IP lookup!)",
+    helpStep0:
+      "Open the <code>github-tutorial</code> folder on your computer. Double-click <code>start.bat</code> (Windows) or run <code>./start.sh</code> (Mac/Linux).<br />The script <strong>finds your IP automatically</strong>, opens a page with a <strong>QR code</strong> — scan it on your phone!",
     helpStep1Title: "Option 1: Same WiFi + computer IP",
     helpStep1:
       "1. Connect phone & computer to the <strong>same WiFi</strong><br />2. On computer run: <code>python3 -m http.server 8080 --bind 0.0.0.0</code><br />3. Find computer IP (Mac: System Settings → Network; Windows: ipconfig)<br />4. On phone open: <strong>http://YOUR-IP:8080</strong> (e.g. http://192.168.1.5:8080)",
@@ -179,6 +187,8 @@ const I18N = {
     helpStep3Title: "Option 3: Deploy to GitHub Pages",
     helpStep3:
       "Push the project to GitHub, enable Pages, then visit <strong>https://yourname.github.io/project-name</strong> on any device!",
+    helpPagesUrl: "https://mjj829.github.io/claude-quickstarts/",
+    helpPagesNote: "(Available after merging the PR and enabling Pages: Settings → Pages → GitHub Actions)",
     helpToggle: "📱 Mobile access guide",
     langToggle: "中文",
     detailedSteps: "📋 Detailed steps",
