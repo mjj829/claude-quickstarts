@@ -1,48 +1,59 @@
-# GitHub 魔法学院 🐙
+# GitHub 魔法学院 / GitHub Magic Academy 🐙
 
-一个面向**完全零基础**用户的交互式 GitHub 入门教程网页。语言简单、界面可爱，小学生也能轻松看懂！
+An interactive, **beginner-friendly** GitHub tutorial — simple enough for kids, available in **中文** and **English**.
 
-## 特点
+## Features
 
-- 🌈 **美观易懂** — 彩色卡片、大按钮、生活化比喻（作业本、时光机、平行世界）
-- 🎮 **互动练习** — 模拟「写文件 → Commit → Push → Pull」完整流程
-- 🧠 **即时测验** — 每课有小测验，最后有毕业考试和证书
-- 📱 **开箱即用** — 纯 HTML/CSS/JS，无需安装依赖
+- 🌈 Beautiful UI with animations, confetti, and step-by-step reveals
+- 🌐 **Bilingual** — toggle 中文 / EN in the top-right corner
+- 📱 **Mobile access guide** — explains why `localhost` fails on phones
+- 🎮 Interactive playground — simulate write → commit → push → pull
+- ✨ **Detailed "Create first project" lesson** — 8 steps + interactive GitHub mock demo
+- 🎓 Quizzes and graduation certificate
 
-## 快速开始
+## Quick start
 
-直接用浏览器打开即可：
+### On computer
 
 ```bash
-# 方法一：双击打开
-open github-tutorial/index.html
-
-# 方法二：启动本地服务器（推荐）
 cd github-tutorial
 python3 -m http.server 8080
-# 然后访问 http://localhost:8080
+# Open http://localhost:8080
 ```
 
-## 课程内容
+### On phone — why localhost fails
 
-1. GitHub 是什么？
-2. 注册账号
-3. 仓库（Repository）
-4. 创建第一个仓库
-5. 提交（Commit）
-6. 推送 & 拉取（Push / Pull）
-7. 分支（Branch）
-8. Pull Request（合并请求）
+**`localhost` always means "this device itself."** If you type `localhost` on your phone, the phone looks for a server on the phone — not on your computer. That's why Safari shows "cannot connect to server."
 
-另有**动手练习场**和**毕业考试**，答对即可拿到「GitHub 小魔法师」证书！
+**3 solutions:**
 
-## 文件结构
+| Method | Steps |
+|--------|-------|
+| **Easiest** | Send the `github-tutorial` folder to your phone and open `index.html` directly — no server needed! |
+| **Same WiFi** | On computer: `python3 -m http.server 8080 --bind 0.0.0.0` → find computer IP → on phone open `http://192.168.x.x:8080` |
+| **GitHub Pages** | Push to GitHub, enable Pages → visit from any device |
+
+The tutorial homepage has an expandable **📱 Mobile access guide** with full details.
+
+## Course content
+
+1. What is GitHub?
+2. Create account
+3. Repository
+4. **Create your first project (detailed)** — with interactive demo
+5. Commit
+6. Push & Pull
+7. Branch
+8. Pull Request
+
+## Files
 
 ```
 github-tutorial/
-├── index.html   # 页面结构
-├── styles.css   # 样式
-├── app.js       # 交互逻辑
+├── index.html
+├── styles.css
+├── i18n.js      # Chinese + English strings
+├── app.js       # Logic & interactivity
 └── README.md
 ```
 
