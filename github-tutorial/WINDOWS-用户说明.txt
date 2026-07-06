@@ -1,0 +1,75 @@
+# Windows 用户请看这里！/ Windows users read this!
+
+## 报错原因
+
+如果你看到：
+```
+python: can't open file '...\Downloads\start.py': No such file or directory
+```
+
+说明：**你只下载了 start.bat，没有下载同文件夹里的其他文件。**
+
+start.bat 必须和 start.py、index.html 等在**同一个文件夹**里才能运行。
+
+---
+
+## 正确文件位置（完整路径示例）
+
+```
+C:\Users\你的用户名\某个文件夹\claude-quickstarts\github-tutorial\start.bat
+C:\Users\你的用户名\某个文件夹\claude-quickstarts\github-tutorial\start.py   ← 必须有
+C:\Users\你的用户名\某个文件夹\claude-quickstarts\github-tutorial\index.html ← 必须有
+```
+
+❌ 错误位置（只有 start.bat，会报错）：
+```
+C:\Users\nienie\Downloads\start.bat   ← 只有这一个文件不行！
+```
+
+---
+
+## 方法一：下载整个项目（推荐）
+
+1. 打开：https://github.com/mjj829/claude-quickstarts
+2. 点击绿色 **Code** 按钮
+3. 点击 **Download ZIP**
+4. 解压 ZIP 文件
+5. 进入文件夹：
+   ```
+   claude-quickstarts-main\github-tutorial\
+   ```
+   （解压后可能是 claude-quickstarts-main 或 claude-quickstarts）
+6. **在这个 github-tutorial 文件夹里** 双击 `start.bat`
+
+---
+
+## 方法二：最简单 — 不用 start.bat
+
+1. 按上面方法一下载并解压整个 ZIP
+2. 进入 `github-tutorial` 文件夹
+3. **直接双击 `index.html`**
+4. 浏览器就会打开教程，不需要 Python，不需要 IP！
+
+---
+
+## 方法三：手机学习
+
+把解压后的整个 `github-tutorial` 文件夹发到手机，用手机浏览器打开里面的 `index.html`。
+
+---
+
+## 文件夹里应该有的文件
+
+```
+github-tutorial/
+├── index.html      ← 教程主页（双击就能用）
+├── start.bat       ← Windows 一键启动（需和 start.py 同目录）
+├── start.py
+├── start.sh
+├── app.js
+├── i18n.js
+├── styles.css
+└── README.md
+```
+
+缺少任何一个，start.bat 都可能报错。但 **index.html 单独双击始终可用**（同目录需有 app.js、i18n.js、styles.css）。

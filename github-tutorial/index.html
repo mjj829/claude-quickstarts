@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub 魔法学院 — 小学生也能学会！</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+    <span class="shape shape-4"></span>
+    <span class="shape shape-5 sparkle"></span>
+    <span class="shape shape-6 sparkle"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-icon pulse" aria-hidden="true">🐙</span>
+      <div>
+        <strong id="site-title">GitHub 魔法学院</strong>
+        <small id="site-subtitle">一步一步，轻松学会</small>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-lang" id="btn-lang" type="button" aria-label="Switch language">EN</button>
+      <div class="header-progress">
+        <span id="progress-label">进度 0 / 8</span>
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="8">
+          <div id="progress-fill" class="progress-fill shimmer"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Welcome -->
+    <section class="screen active" data-screen="welcome">
+      <div class="hero-card slide-up">
+        <div class="hero-mascot bounce">🐱‍💻</div>
+        <h1 id="welcome-title">你好，小魔法师！</h1>
+        <p class="lead" id="welcome-lead">
+          GitHub 是一个<strong>存放代码和作品</strong>的超级大仓库。<br />
+          就像班级里的<strong>公共作业本</strong>，你可以保存、分享、一起修改项目！
+        </p>
+        <div class="hero-tags" id="hero-tags">
+          <span class="tag wiggle">🎮 不用怕</span>
+          <span class="tag wiggle">🌈 超好玩</span>
+          <span class="tag wiggle">⭐ 有奖励</span>
+        </div>
+        <button class="btn btn-primary btn-large glow" data-action="start" id="start-btn">
+          开始冒险 →
+        </button>
+      </div>
+
+      <!-- Mobile access help -->
+      <details class="help-card slide-up delay-1" id="help-card">
+        <summary id="help-toggle">📱 手机访问指南</summary>
+        <div class="help-body">
+          <h3 id="help-title">📱 手机打不开？看这里！</h3>
+          <div class="help-alert">
+            <strong id="help-why">为什么手机访问 localhost 不行？</strong>
+            <p id="help-reason"></p>
+          </div>
+          <h4 id="help-steps-title">正确做法（4 选 1）</h4>
+          <div class="help-steps">
+            <div class="help-step highlight star-step">
+              <strong id="help-step0-title"></strong>
+              <p id="help-step0"></p>
+            </div>
+            <div class="help-step">
+              <strong id="help-step1-title"></strong>
+              <p id="help-step1"></p>
+            </div>
+            <div class="help-step">
+              <strong id="help-step2-title"></strong>
+              <p id="help-step2"></p>
+            </div>
+            <div class="help-step">
+              <strong id="help-step3-title"></strong>
+              <p id="help-step3"></p>
+              <p class="pages-link-wrap">
+                <a class="pages-link" id="help-pages-link" href="https://mjj829.github.io/claude-quickstarts/" target="_blank" rel="noopener"></a>
+                <small id="help-pages-note"></small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- Lesson -->
+    <section class="screen" data-screen="lesson">
+      <nav class="lesson-nav" id="lesson-dots" aria-label="课程导航"></nav>
+      <article class="lesson-card slide-up" id="lesson-content"></article>
+      <div class="lesson-actions">
+        <button class="btn btn-ghost" id="btn-prev" disabled>← 上一课</button>
+        <button class="btn btn-primary glow" id="btn-next">下一课 →</button>
+      </div>
+    </section>
+
+    <!-- Playground -->
+    <section class="screen" data-screen="playground">
+      <h2 class="slide-up" id="pg-title">🎮 动手练习场</h2>
+      <p class="subtitle slide-up delay-1" id="pg-subtitle">点击按钮，模拟真实的 GitHub 操作！</p>
+
+      <div class="playground-grid">
+        <div class="play-panel slide-up delay-1">
+          <h3 id="pg-local">📁 你的电脑（本地）</h3>
+          <div class="folder" id="local-folder">
+            <div class="folder-tab">my-project</div>
+            <div class="folder-body" id="local-files">
+              <p class="empty-hint" id="empty-local">文件夹是空的…</p>
+            </div>
+          </div>
+          <div class="play-buttons">
+            <button class="btn btn-small" data-play="create-file" id="pg-create-file">✏️ 写一个新文件</button>
+            <button class="btn btn-small" data-play="commit" id="pg-commit">💾 保存快照 (commit)</button>
+          </div>
+        </div>
+
+        <div class="play-arrows slide-up delay-2">
+          <button class="btn btn-push pulse-green" data-play="push" id="pg-push">推送 Push ↑</button>
+          <button class="btn btn-pull pulse-blue" data-play="pull" id="pg-pull">拉取 Pull ↓</button>
+        </div>
+
+        <div class="play-panel cloud-panel slide-up delay-1">
+          <h3 id="pg-cloud">☁️ GitHub 云端</h3>
+          <div class="folder cloud" id="cloud-folder">
+            <div class="folder-tab">my-project</div>
+            <div class="folder-body" id="cloud-files">
+              <p class="empty-hint" id="empty-cloud">还没有上传…</p>
+            </div>
+          </div>
+          <div class="status-log" id="status-log">
+            <p id="log-hint">💡 提示：先写文件，再保存快照，最后推送！</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="playground-quiz slide-up">
+        <h3 id="order-quiz-title">🧠 小测验：正确的顺序是？</h3>
+        <div class="quiz-options" id="order-quiz">
+          <button class="quiz-btn" data-answer="wrong" id="order-opt1"></button>
+          <button class="quiz-btn" data-answer="correct" id="order-opt2"></button>
+          <button class="quiz-btn" data-answer="wrong" id="order-opt3"></button>
+        </div>
+        <p class="quiz-feedback" id="order-feedback" hidden></p>
+      </div>
+
+      <button class="btn btn-primary btn-large glow" data-action="to-quiz" id="to-quiz-btn">去毕业考试 →</button>
+    </section>
+
+    <!-- Quiz -->
+    <section class="screen" data-screen="quiz">
+      <h2 class="slide-up" id="quiz-title">🎓 毕业考试</h2>
+      <p class="subtitle slide-up delay-1" id="quiz-subtitle">答对 4 题就能拿到 GitHub 小魔法师证书！</p>
+      <div id="quiz-container"></div>
+      <button class="btn btn-primary btn-large glow" id="btn-submit-quiz" hidden>交卷看成绩</button>
+    </section>
+
+    <!-- Certificate -->
+    <section class="screen" data-screen="certificate">
+      <div class="cert-card cert-pop" id="cert-card">
+        <div class="cert-sparkles" aria-hidden="true">✨ ⭐ ✨</div>
+        <div class="cert-badge bounce">🏆</div>
+        <h2 id="cert-title">GitHub 小魔法师</h2>
+        <p class="cert-score" id="cert-score"></p>
+        <p class="cert-text" id="cert-text"></p>
+        <div class="cert-stamps" id="cert-stamps">
+          <span>⭐ 仓库</span>
+          <span>💾 提交</span>
+          <span>☁️ 推送</span>
+          <span>🔀 分支</span>
+        </div>
+        <div class="cert-actions">
+          <button class="btn btn-primary glow" data-action="restart" id="restart-btn">再学一遍</button>
+          <a class="btn btn-ghost" href="https://github.com" target="_blank" rel="noopener" id="open-github-btn">
+            打开真正的 GitHub →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

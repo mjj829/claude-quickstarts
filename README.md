@@ -38,6 +38,12 @@ An autonomous coding agent powered by the Claude Agent SDK. This project demonst
 
 [Go to Autonomous Coding Agent Quickstart](./autonomous-coding)
 
+### GitHub Tutorial for Beginners
+
+An interactive, kid-friendly web tutorial that teaches GitHub basics in simple Chinese. No dependencies required — just open in a browser.
+
+[Go to GitHub Tutorial](./github-tutorial)
+
 ## General Usage
 
 Each quickstart project comes with its own README and setup instructions. Generally, you'll follow these steps:
