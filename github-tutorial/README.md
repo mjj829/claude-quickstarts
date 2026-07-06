@@ -13,10 +13,27 @@ An interactive, **beginner-friendly** GitHub tutorial — simple enough for kids
 
 ## Quick start — no IP lookup needed!
 
+> **⚠️ Windows 注意：** 不要只下载 `start.bat` 一个文件！必须下载整个 `github-tutorial` 文件夹（见下方「下载整个项目」）。  
+> 最简单：解压后双击 `github-tutorial/index.html` 即可，无需 Python。
+
 ### ⭐ One click (recommended)
 
-**Windows:** double-click `start.bat`  
-**Mac / Linux:** run `./start.sh`
+**Windows:** 进入 `claude-quickstarts/github-tutorial/` 文件夹，双击 `start.bat`  
+**Mac / Linux:** 进入 `claude-quickstarts/github-tutorial/`，运行 `./start.sh`
+
+完整路径示例（Windows）：
+```
+C:\Users\你的用户名\Documents\claude-quickstarts\github-tutorial\start.bat
+```
+
+### 下载整个项目（不要只下载单个文件）
+
+1. 打开 https://github.com/mjj829/claude-quickstarts
+2. 点 **Code** → **Download ZIP**
+3. 解压后进入 `claude-quickstarts-main/github-tutorial/`（或 `claude-quickstarts/github-tutorial/`）
+4. 双击 `start.bat` 或 `index.html`
+
+详细说明见：`github-tutorial/WINDOWS-用户说明.txt`
 
 The script will:
 1. **Find your computer's IP automatically**
